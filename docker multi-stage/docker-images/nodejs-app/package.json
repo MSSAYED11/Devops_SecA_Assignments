@@ -1,0 +1,12 @@
+{
+  "name": "nodejs-multistage-app",
+  "version": "1.0.0",
+  "description": "Minimal Node.js Multi-stage Docker App",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
