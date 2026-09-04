@@ -10,7 +10,8 @@
 **Objective:** Create 3 containers (Frontend, Backend, Database) across 3 networks and bridge the backend to the frontend.
 
 **Verification (Ping from Backend to Frontend):**
-<img width="925" height="781" alt="image" src="https://github.com/user-attachments/assets/faf53d81-6368-49e8-85a9-7e84b4225077" />
+<img width="681" height="171" alt="image" src="https://github.com/user-attachments/assets/783e274f-3781-4151-94a0-03f5435e64d7" />
+
 
 
 ---
