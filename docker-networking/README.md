@@ -51,7 +51,8 @@ I checked the page first with the original content and then modified the HTML fi
 
 ### Verification
 
-![Uploading image.png…]()
+<img width="736" height="87" alt="image" src="https://github.com/user-attachments/assets/72233593-be85-431c-a410-afb7faf019f0" />
+
 
 
 ---
