@@ -332,9 +332,83 @@ I used `wget` with the `--spider` option so it checks the URL without actually d
 The `-q` option keeps the output quiet. Since the command finished with exit code `0` and didn't show an error, the resource was reachable.
 
 ---
+---
+
+## 14. Identifying Open Port Processes (`lsof`)
+
+**Command:**
+
+```bash
+sudo lsof -i :53
+```
+
+**Output:**
+
+```text
+COMMAND    PID             USER FD   TYPE DEVICE SIZE/OFF NODE NAME
+systemd-r  81 systemd-resolve 16u  IPv4   8270      0t0  UDP 127.0.0.53:domain
+systemd-r  81 systemd-resolve 17u  IPv4   8271      0t0  TCP 127.0.0.53:domain (LISTEN)
+systemd-r  81 systemd-resolve 18u  IPv4   8272      0t0  UDP 127.0.0.54:domain
+systemd-r  81 systemd-resolve 19u  IPv4   8273      0t0  TCP 127.0.0.54:domain (LISTEN)
+```
+
+**My understanding:**
+
+I used `lsof` to check which process is using port 53 on my system. Port 53 is normally used for DNS.
+
+From the output, I can see that `systemd-resolved` is using this port. Its process ID is `81`, and it is listening on both TCP and UDP. So basically, this is the process handling the local DNS requests on my system.
+
+---
+
+## 15. Quick DNS Lookup (`host`)
+
+**Command:**
+
+```bash
+host github.com
+```
+
+**Output:**
+
+```text
+github.com has address 20.207.73.82
+github.com mail is handled by 0 github-com.mail.protection.outlook.com.
+```
+
+**My understanding:**
+
+I used the `host` command to quickly check the DNS information for `github.com`.
+
+It showed that `github.com` resolves to the IP address `20.207.73.82`. It also showed the mail server information, which points to Microsoft's Outlook protection service.
+
+So compared to `dig`, `host` gives me a much shorter and simpler result, which is useful when I just want to quickly check a domain.
+
+---
+
+## 16. Neighbor Discovery & ARP Table (`ip neigh`)
+
+**Command:**
+
+```bash
+ip neigh
+```
+
+**Output:**
+
+```text
+172.20.32.1 dev eth0 lladdr 00:15:5d:7b:de:3c STALE
+```
+
+**My understanding:**
+
+I used `ip neigh` to check the neighbour information stored by my Linux system.
+
+The output shows the IP address `172.20.32.1` along with its MAC address `00:15:5d:7b:de:3c`. It is connected through the `eth0` interface.
+
+The `STALE` status means the entry is already known by the system, but it hasn't been recently confirmed as active. Since I'm using WSL, this is part of the virtual network setup.
 
 ## Conclusion
 
-After trying these commands, I got a better idea of how basic networking works in Linux. I was able to check connectivity, DNS resolution, network routes, IP addresses, open ports, HTTP responses and network sockets using the terminal.
+After trying these commands, I got a better idea of how networking works in Linux. I was able to check connectivity, DNS resolution, network routes, IP addresses, open ports, HTTP responses and network sockets using the terminal.
 
 Most of these commands are pretty small, but they give a lot of useful information when checking or troubleshooting a network.
