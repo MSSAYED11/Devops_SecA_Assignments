@@ -44,24 +44,7 @@ After running the container, I can open this in my browser:
 http://localhost:<port>
 ```
 
-If everything is working correctly, the **Hello World** output will be displayed in the browser.
+Everything is working correctly, the **Hello World** output is displayed in the browser.
+<img width="1130" height="582" alt="image" src="https://github.com/user-attachments/assets/f3f852b2-a475-4034-9138-36011072992b" />
 
 ---
-
-## Pushing the Assignment to GitHub
-
-After completing the Docker applications, I added the README file to Git and pushed the changes to my GitHub repository.
-
-```bash
-git add docker-fundamentals/README.md
-git commit -m "Add README.md for Docker Fundamentals assignment"
-git push origin main
-```
-
----
-
-## Google Form Submission Link
-
-For the Docker Fundamentals section of the Google Form, I used this GitHub README link:
-
-`https://github.com/MSSAYED11/Devops_SecA_Assignments/blob/main/docker-fundamentals/README.md`
