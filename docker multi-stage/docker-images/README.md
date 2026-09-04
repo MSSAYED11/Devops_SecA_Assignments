@@ -24,8 +24,10 @@ EXPOSE 80
 ```
 
 The main thing I understood here is that I don't need to keep the first image as the final runtime environment. I can use the first stage for the required files and then copy only what I need into the second stage.
+### 2. Application running successfully
+<img width="1222" height="587" alt="image" src="https://github.com/user-attachments/assets/f7dd2206-0107-4dc6-8b9e-e1f3ee95a414" />
 
-### 2. Checking the Application Output
+### 3. Checking the Application Output
 
 After running the container, I checked the application using `curl`:
 
@@ -36,7 +38,7 @@ $ curl http://localhost:8080
 
 The output came correctly, so the application was running properly.
 
-### 3. Checking the Container
+### 4. Checking the Container
 
 I also used `docker ps` to make sure the container was actually running:
 
