@@ -20,7 +20,7 @@
 **Objective:** Run an Apache2 container using the host's network stack.
 
 **Verification:**
-<!-- ADD YOUR TASK 2 APACHE/DOCKER PS SCREENSHOT HERE -->
+<img width="1442" height="45" alt="image" src="https://github.com/user-attachments/assets/dc71e4d8-9016-41b9-b11f-522d4ce04754" />
 
 ---
 
