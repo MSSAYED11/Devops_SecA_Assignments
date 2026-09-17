@@ -29,7 +29,8 @@ The task includes converting the values to Base64, creating an Opaque Secret, ch
 > **Screenshot:** Add the screenshot of the terminal execution here.
 > It should show the Base64 encoding, Secret creation using `kubectl apply`, checking the Secret with `kubectl get`, and decoding the values using `jsonpath`.
 
-![Task 02 Terminal Execution](./02-secret/screenshot.png)
+<img width="865" height="853" alt="image" src="https://github.com/user-attachments/assets/5842d4dc-3090-4513-b876-2cc54aae50e2" />
+
 
 ---
 
@@ -42,7 +43,12 @@ I also generated a self-signed TLS certificate using `openssl`, created a TLS Se
 > **Screenshot:** Add the screenshot of the terminal execution here.
 > It should show the Ingress setup, TLS certificate generation, TLS Secret creation, and testing the Ingress using `curl`.
 
-![Task 03 Terminal Execution](./03-ingress/screenshot.png)
+<img width="1287" height="851" alt="image" src="https://github.com/user-attachments/assets/39f2d2d8-d4e3-4544-a13e-7c5b9a3aff6f" />
+<img width="1325" height="1161" alt="image" src="https://github.com/user-attachments/assets/53def339-2cad-480f-8705-2abed29ae216" />
+<img width="1289" height="1006" alt="image" src="https://github.com/user-attachments/assets/563720a5-5928-4060-8452-615cd07b52a2" />
+
+
+
 
 ---
 
