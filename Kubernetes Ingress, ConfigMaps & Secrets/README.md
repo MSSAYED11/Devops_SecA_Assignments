@@ -75,6 +75,10 @@ I also checked the environment variables inside the running pod and ran the prov
 > It should show the deployment steps, Ingress addon setup, rollout status, port-forwarding, successful responses from `/` and `/api/`, checking the pod environment, and the script execution.
 
 <img width="1085" height="812" alt="image" src="https://github.com/user-attachments/assets/024b0707-2e9e-4b5d-baa3-fb10e77fe29d" />
+<img width="1137" height="994" alt="image" src="https://github.com/user-attachments/assets/ed59a514-80a7-44ff-83ec-294b15493313" />
+<img width="1135" height="1240" alt="image" src="https://github.com/user-attachments/assets/59b17d82-a9ee-4691-985e-c93a9b428feb" />
+<img width="1113" height="997" alt="image" src="https://github.com/user-attachments/assets/6005b36b-13f1-4353-a3df-01c46c0c25f3" />
+<img width="1105" height="1105" alt="image" src="https://github.com/user-attachments/assets/c55c2f05-2018-4bd3-99a6-42b2b1e532aa" />
 
 
 ---
