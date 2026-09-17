@@ -47,6 +47,7 @@ I also generated a self-signed TLS certificate using `openssl`, created a TLS Se
 <img width="1287" height="851" alt="image" src="https://github.com/user-attachments/assets/39f2d2d8-d4e3-4544-a13e-7c5b9a3aff6f" />
 <img width="1325" height="1161" alt="image" src="https://github.com/user-attachments/assets/53def339-2cad-480f-8705-2abed29ae216" />
 <img width="1289" height="1006" alt="image" src="https://github.com/user-attachments/assets/563720a5-5928-4060-8452-615cd07b52a2" />
+<img width="1104" height="538" alt="image" src="https://github.com/user-attachments/assets/2c230b46-1892-42fd-aa44-73caee83c98d" />
 
 
 
@@ -73,7 +74,8 @@ I also checked the environment variables inside the running pod and ran the prov
 > **Screenshot:** Add the screenshot of the complete terminal execution here.
 > It should show the deployment steps, Ingress addon setup, rollout status, port-forwarding, successful responses from `/` and `/api/`, checking the pod environment, and the script execution.
 
-![Task 04 Terminal Execution](./04-full-demo/screenshot.png)
+<img width="1085" height="812" alt="image" src="https://github.com/user-attachments/assets/024b0707-2e9e-4b5d-baa3-fb10e77fe29d" />
+
 
 ---
 
