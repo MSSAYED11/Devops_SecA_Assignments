@@ -79,6 +79,8 @@ I also checked the environment variables inside the running pod and ran the prov
 <img width="1135" height="1240" alt="image" src="https://github.com/user-attachments/assets/59b17d82-a9ee-4691-985e-c93a9b428feb" />
 <img width="1113" height="997" alt="image" src="https://github.com/user-attachments/assets/6005b36b-13f1-4353-a3df-01c46c0c25f3" />
 <img width="1105" height="1105" alt="image" src="https://github.com/user-attachments/assets/c55c2f05-2018-4bd3-99a6-42b2b1e532aa" />
+<img width="921" height="1240" alt="image" src="https://github.com/user-attachments/assets/0a801e74-0d66-4f2d-92d7-8db874c8e02b" />
+<img width="914" height="870" alt="image" src="https://github.com/user-attachments/assets/97a6a0c0-b9b6-437f-b608-6e06abc5a2b0" />
 
 
 ---
