@@ -15,7 +15,7 @@ I also tried out some basic `kubectl` commands to create, check, extract values 
 > **Screenshot:** Add the screenshot of the terminal execution here.
 > It should show ConfigMap creation using `kubectl apply`, checking it with `kubectl describe`, getting a value using `jsonpath`, and deleting it.
 
-<img width="786" height="1135" alt="image" src="https://github.com/user-attachments/assets/f798b68d-86fd-4e0d-98ba-8c48605754b3" />
+<img width="1116" height="1230" alt="image" src="https://github.com/user-attachments/assets/3f062854-5ccc-448c-bff3-e3594810201b" />
 
 
 ---
@@ -29,7 +29,8 @@ The task includes converting the values to Base64, creating an Opaque Secret, ch
 > **Screenshot:** Add the screenshot of the terminal execution here.
 > It should show the Base64 encoding, Secret creation using `kubectl apply`, checking the Secret with `kubectl get`, and decoding the values using `jsonpath`.
 
-<img width="865" height="853" alt="image" src="https://github.com/user-attachments/assets/5842d4dc-3090-4513-b876-2cc54aae50e2" />
+<img width="1318" height="1124" alt="image" src="https://github.com/user-attachments/assets/bc2cd6d1-6750-4021-87c4-5a18568ee66e" />
+
 
 
 ---
