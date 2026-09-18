@@ -1,4 +1,4 @@
-In this session, I practiced different Kubernetes deployment strategies and checked how each one behaves while updating or replacing an application.
+<img width="1351" height="1141" alt="image" src="https://github.com/user-attachments/assets/e130deb8-5014-4a23-8e81-de8baf76ec8f" />In this session, I practiced different Kubernetes deployment strategies and checked how each one behaves while updating or replacing an application.
 
 The four strategies covered are:
 
@@ -39,6 +39,7 @@ This makes it easier to test the new version before directing traffic to it.
 
 ### Terminal Execution
 
+<img width="1391" height="1175" alt="image" src="https://github.com/user-attachments/assets/631c8c86-23dd-451c-93ab-36713fbccd44" />
 
 
 ### Browser Output
@@ -56,8 +57,9 @@ A Canary deployment releases the new version to only a small portion of users or
 Instead of immediately moving everyone to the new version, I can check how the new version behaves with limited traffic. If everything works properly, the new version can gradually receive more traffic.
 
 ### Terminal Execution
-<img width="1460" height="1163" alt="image" src="https://github.com/user-attachments/assets/cce18166-19d7-443b-b160-01da2ea559c1" />
-![Uploading image.png…]()
+<img width="1391" height="1175" alt="image" src="https://github.com/user-attachments/assets/ff278716-f8b1-469b-9cac-d7bc7a23265a" />
+
+<img width="1429" height="683" alt="image" src="https://github.com/user-attachments/assets/abd61342-32c8-4cd1-a26c-b9c143266331" />
 
 
 ### Browser Output
