@@ -62,11 +62,6 @@ Instead of immediately moving everyone to the new version, I can check how the n
 <img width="1429" height="683" alt="image" src="https://github.com/user-attachments/assets/abd61342-32c8-4cd1-a26c-b9c143266331" />
 
 
-### Browser Output
-
-<!-- Paste the browser screenshot(s) here -->
-
----
 
 ## 10.4 Recreate Deployment
 
@@ -78,13 +73,11 @@ I used this strategy to see how Kubernetes handles a complete replacement of the
 
 ### Terminal Execution
 
-<!-- Paste the complete terminal output here -->
+<img width="2102" height="1168" alt="image" src="https://github.com/user-attachments/assets/97f36856-d231-47b1-9da1-a68f67407eef" />
+<img width="2261" height="379" alt="image" src="https://github.com/user-attachments/assets/44bf1128-62fc-4121-8e08-0cf1172235af" />
 
-### Browser Output
 
-<!-- Paste the browser screenshot(s) here -->
 
----
 
 ## Conclusion
 
