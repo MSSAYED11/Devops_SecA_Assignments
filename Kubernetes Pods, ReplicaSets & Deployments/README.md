@@ -39,8 +39,6 @@ This makes it easier to test the new version before directing traffic to it.
 
 ### Terminal Execution
 
-<img width="908" height="298" alt="image" src="https://github.com/user-attachments/assets/17bb5bba-5f13-478d-b1a2-ccc696ddd76d" />
-
 
 
 ### Browser Output
@@ -58,7 +56,7 @@ A Canary deployment releases the new version to only a small portion of users or
 Instead of immediately moving everyone to the new version, I can check how the new version behaves with limited traffic. If everything works properly, the new version can gradually receive more traffic.
 
 ### Terminal Execution
-![Uploading image.png…]()
+<img width="1460" height="1163" alt="image" src="https://github.com/user-attachments/assets/cce18166-19d7-443b-b160-01da2ea559c1" />
 ![Uploading image.png…]()
 
 
