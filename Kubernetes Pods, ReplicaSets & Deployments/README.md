@@ -1,5 +1,3 @@
-<img width="1352" height="1169" alt="image" src="https://github.com/user-attachments/assets/33381611-5395-4755-a3e2-00d873cf9a84" /># 10. Kubernetes Deployment Strategies
-
 In this session, I practiced different Kubernetes deployment strategies and checked how each one behaves while updating or replacing an application.
 
 The four strategies covered are:
