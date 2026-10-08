@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gitops-webapp
+  namespace: session20-gitops
+  labels:
+    app: gitops-webapp
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gitops-webapp
+  template:
+    metadata:
+      labels:
+        app: gitops-webapp
+    spec:
+      containers:
+        - name: webapp
+          image: nginx:1.27
+          ports:
+            - containerPort: 80

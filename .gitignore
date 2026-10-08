@@ -1,0 +1,14 @@
+# Terraform binaries and provider caches
+.terraform/
+*.tfstate
+*.tfstate.*
+crash.log
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
