@@ -1,0 +1,32 @@
+name: CD Pipeline
+
+on:
+  workflow_run:
+    workflows: ["CI Pipeline"]
+    types: [completed]
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    name: Build & Deploy Container
+    if: ${{ github.event.workflow_run.conclusion == 'success' || github.event_name == 'workflow_dispatch' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build Docker Image
+        run: |
+          docker build -t calculator-app:${{ github.sha }} .
+          echo "Image successfully built: calculator-app:${{ github.sha }}"
+
+      - name: Deploy Container Service
+        env:
+          DEPLOY_ENV: production
+        run: |
+          echo "Deploying application release to ${DEPLOY_ENV}..."
+          echo "Deployment successful!"
