@@ -1,0 +1,10 @@
+frontend:
+  image: ghcr.io/MSSAYED11/restaurant-frontend
+backend:
+  image: ghcr.io/MSSAYED11/restaurant-backend
+replicaCount: 2
+ingress:
+  enabled: true
+  host: restaurant.example.com
+hpa:
+  enabled: true

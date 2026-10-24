@@ -1,0 +1,30 @@
+frontend:
+  image: ghcr.io/MSSAYED11/restaurant-frontend
+  tag: latest
+  replicaCount: 2
+backend:
+  image: ghcr.io/MSSAYED11/restaurant-backend
+  tag: latest
+  replicaCount: 2
+replicaCount: 2
+namespace: restaurant
+imagePullSecrets: []
+postgres:
+  host: restaurant-postgres
+  database: restaurant_db
+  username: restaurant_user
+  password: restaurant_password_placeholder
+ingress:
+  enabled: false
+  host: restaurant.local
+hpa:
+  enabled: true
+  minReplicas: 2
+  maxReplicas: 6
+  targetCPUUtilizationPercentage: 60
+resources:
+  requests: {cpu: 100m, memory: 256Mi}
+  limits: {cpu: 500m, memory: 512Mi}
+monitoring:
+  serviceMonitor:
+    enabled: true
