@@ -9,10 +9,10 @@
 
 ## 🎥 Project Demonstration & Presentation
 
-- 🎬 **YouTube Demo Video**: [Watch Walkthrough on YouTube](https://youtu.be/CR20rCj1bJE)
+- 🎬 **YouTube Demo Video**: [Watch Walkthrough on YouTube](https://youtu.be/S3wIm8jJelo)
 - 📊 **Executive Presentation (PPTX / PDF)**: [Savoria Presentation (PDF)](demo/Savoria_Presentation.pdf) • [Savoria Presentation (PPTX)](demo/Savoria_Presentation.pptx)
 
-[![Watch Walkthrough on YouTube](https://img.youtube.com/vi/pZ3LgxX7W6I/maxresdefault.jpg)](https://youtu.be/pZ3LgxX7W6I)
+[![Watch Walkthrough on YouTube](https://img.youtube.com/vi/S3wIm8jJelo/hqdefault.jpg)](https://youtu.be/S3wIm8jJelo)
 
 ---
 
@@ -279,7 +279,7 @@ The table below maps all project deliverables and verification runs against cour
 | **16** | `evidence/16-helm-list-ingress.png` | `helm list -n restaurant` and Ingress hostname routing | M8 | **Embedded Below** — [Lint Output](evidence/05-helm-lint.txt) |
 | **17** | `evidence/17-prometheus-targets.png` | Prometheus Targets page showing application endpoint `UP` (1/1) | M9 | **Embedded Below** |
 | **18** | `evidence/18-grafana-dashboard.png` | Grafana Dashboard with populated request latency/rate panels | M9 | **Embedded Below** |
-| **19** | `evidence/19-demo-video-link.txt` | End-to-end video walkthrough of application, infrastructure & pipeline | M10 | **Embedded Below** — [YouTube Video](https://youtu.be/CR20rCj1bJE) |
+| **19** | `evidence/19-demo-video-link.txt` | End-to-end video walkthrough of application, infrastructure & pipeline | M10 | **Embedded Below** — [YouTube Video](https://youtu.be/S3wIm8jJelo) |
 
 ---
 
@@ -361,8 +361,8 @@ The table below maps all project deliverables and verification runs against cour
 ![18-grafana-dashboard](evidence/18-grafana-dashboard.png)
 
 #### 19 — Project Demonstration Walkthrough & Presentation
-- 🎬 **YouTube Video Walkthrough**: [Watch on YouTube](https://youtu.be/CR20rCj1bJE)
+- 🎬 **YouTube Video Walkthrough**: [Watch on YouTube](https://youtu.be/S3wIm8jJelo)
 - 📊 **Executive Presentation**: [Savoria Presentation (PDF)](demo/Savoria_Presentation.pdf) • [Savoria Presentation (PPTX)](demo/Savoria_Presentation.pptx)
 - 📝 **Details File**: [`evidence/19-demo-video-link.txt`](evidence/19-demo-video-link.txt)
 
-[![Watch Walkthrough on YouTube](https://img.youtube.com/vi/pZ3LgxX7W6I/maxresdefault.jpg)](https://youtu.be/pZ3LgxX7W6I)
+[![Watch Walkthrough on YouTube](https://img.youtube.com/vi/S3wIm8jJelo/hqdefault.jpg)](https://youtu.be/S3wIm8jJelo)
