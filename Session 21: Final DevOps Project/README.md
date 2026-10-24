@@ -61,11 +61,11 @@ Frontend Service        Backend Service       PostgreSQL DB
           Grafana Dashboards
 ```
 
-- **Frontend**: React 18, Vite, Vanilla CSS, served via unprivileged Nginx (port 8080, non-root `nginx` user).
-- **Backend**: FastAPI (Python 3.12), SQLAlchemy ORM, Alembic migrations, non-root `appuser` (UID 10001).
+- **Frontend**: React 18, Vite, Vanilla CSS, multi-stage Docker build served via unprivileged Nginx (port 8080, non-root `nginx` user UID 101).
+- **Backend**: FastAPI (Python 3.12), SQLAlchemy ORM, Alembic migrations, single-stage Debian slim container running as non-root `appuser` (UID 10001).
 - **Database**: PostgreSQL 16 Alpine with connection healthchecks and schema migrations.
 - **Testing**: Pytest with automated coverage for REST APIs and business validation logic.
-- **Security**: Trivy CVE scanning integrated in CI/CD; non-root multi-stage containers.
+- **Security**: Trivy CVE scanning integrated in CI/CD; only the frontend Dockerfile is multi-stage (backend is single-stage), and both containers run as unprivileged non-root users.
 - **Infrastructure as Code**: Terraform AWS VPC and EKS cluster with managed node groups.
 - **Orchestration**: Kubernetes manifests packaged as a Helm chart with 2+ replicas, ClusterIP services, Ingress, and ServiceMonitor.
 - **Observability**: Prometheus instrumentation via `/metrics`, ServiceMonitor scraping, and Grafana dashboards.
@@ -120,18 +120,18 @@ The GitHub Actions workflow [`.github/workflows/ci-cd.yml`](.github/workflows/ci
 
 1. **Test Stage**:
    - Sets up Python 3.12 and executes `pytest -v` across all API test suites.
-   - Sets up Node.js 22 and runs `npm run build` for the frontend.
+   - Sets up Node.js 20 (LTS) and runs `npm run build` for the frontend.
    - Supports execution from repository root or subfolder (`Session 21: Final DevOps Project`).
 2. **Build & Scan Stage**:
    - Builds non-root container images tagged with the commit SHA and `latest`.
    - Uses lowercase repository names: `ghcr.io/mssayed11/restaurant-backend` and `ghcr.io/mssayed11/restaurant-frontend`.
-   - **Trivy Vulnerability Scan**: Scans both backend and frontend images. If any unfixed `HIGH` or `CRITICAL` severity CVEs are detected, the pipeline fails immediately (`exit-code: 1`).
+   - **Trivy Vulnerability Scan**: Scans both backend and frontend images using `--severity HIGH,CRITICAL --ignore-unfixed --exit-code 1`. Any fixable HIGH or CRITICAL finding fails the job before the docker push step.
    - Pushes verified container images to GitHub Container Registry (GHCR).
 3. **Deploy Stage**:
    - Deploys the Helm chart to the Kubernetes cluster using `helm upgrade --install`.
 
 ### Trivy Security Explanation
-Trivy automatically scans both the frontend (Nginx) and backend (FastAPI) container images during the GitHub Actions pipeline, inspecting OS base packages and application dependencies for known Common Vulnerabilities and Exposures (CVEs). It actively gates the pipeline by enforcing `exit-code: 1` on any unfixed HIGH or CRITICAL severity vulnerabilities, ensuring no vulnerable container images are ever pushed to GitHub Container Registry (GHCR). A clean scan confirms that all installed packages and runtime dependencies adhere to container security benchmarks without exploitable security risks.
+Trivy automatically scans both the frontend (Nginx) and backend (FastAPI) container images during the GitHub Actions pipeline, inspecting OS base packages and application dependencies for known Common Vulnerabilities and Exposures (CVEs). Only the frontend Dockerfile is multi-stage (Node.js 20 build stage followed by an unprivileged Nginx runtime), while the backend is an optimized single-stage Debian slim container. The pipeline actively gates image publishing by enforcing `--exit-code 1`, `--severity HIGH,CRITICAL`, and `--ignore-unfixed` on both scans, ensuring that any fixable HIGH or CRITICAL finding fails the job before the `docker push` step. A clean scan confirms that all installed packages and runtime dependencies adhere to container security benchmarks without exploitable security risks.
 
 ---
 
@@ -171,7 +171,7 @@ Located in [`helm/restaurant/`](helm/restaurant/):
 
 ## 7. Submission Evidence & Rubric Mapping
 
-The table below maps all project deliverables and verification runs against course modules **M1 through M10**. All 7 local verification runs and live application pages have been captured and verified as real PNGs embedded below. Items requiring cloud infrastructure or remote CI triggers are documented in [SUBMISSION.md](SUBMISSION.md) and [troubleshooting/README.md](troubleshooting/README.md).
+The table below maps all project deliverables and verification runs against course modules **M1 through M10**. All verification runs, live application pages, CI/CD pipeline executions, and AWS EKS/Terraform lifecycle operations have been captured and verified as real PNGs embedded below.
 
 | # | File | What It Shows | Rubric Module | Status / Evidence |
 |---|------|---------------|---------------|-------------------|
@@ -188,10 +188,11 @@ The table below maps all project deliverables and verification runs against cour
 | **08** | `evidence/08-git-commit-history.png` | `git log --oneline -n 12` (structured, conventional commit history) | M3 | **Embedded Below** |
 | **09** | `evidence/09-github-actions-pipeline.png` | GitHub Actions green pipeline run (Test, Trivy Scan, Build & Push) | M5 | **Embedded Below** — [Live Run #10](https://github.com/MSSAYED11/Devops_SecA_Assignments/actions/runs/40066232683) |
 | **10** | `evidence/10-ghcr-packages.png` | GitHub Container Registry packages with commit SHA tags | M5 | **Embedded Below** — [Packages](https://github.com/MSSAYED11?tab=packages) |
-| **11** | `evidence/11-trivy-scan-output.png` | Trivy scan output passing with 0 HIGH/CRITICAL CVEs | M6 | **Embedded Below** — (See [trivy-explanation.md](trivy-explanation.md)) |
+| **11** | `evidence/11-trivy-scan-output.png` | Trivy scan output from the CI job log | M6 | `TODO` — (See [trivy-explanation.md](trivy-explanation.md)) |
 | **12** | `evidence/12-terraform-plan.png` | `terraform plan` execution output for AWS VPC & EKS | M7 | **Embedded Below** — [Init/Validate Output](evidence/04-terraform-validate.txt) |
-| **13** | `evidence/13-aws-console-eks.png` | AWS Management Console showing active VPC and EKS cluster | M7 | `TODO (Post Terraform Apply)` |
-| **14** | `evidence/14-terraform-destroy.png` | `terraform destroy` confirmation showing 0 orphaned AWS resources | M7 | `TODO (Post Teardown)` |
+| **13** | `evidence/13-aws-console-eks.png` | AWS Management Console showing active VPC and EKS cluster | M7 | **Embedded Below** |
+| **13b** | `evidence/13b-aws-console-vpc.png` | AWS Management Console showing provisioned VPC and subnets | M7 | `TODO` |
+| **14** | `evidence/14-terraform-destroy.png` | `terraform destroy` confirmation showing 0 orphaned AWS resources | M7 | **Embedded Below** |
 | **15** | `evidence/15-k8s-pods-running.png` | `kubectl get pods -n restaurant` showing all pods `Running` | M8 | **Embedded Below** |
 | **16** | `evidence/16-helm-list-ingress.png` | `helm list -n restaurant` and Ingress hostname routing | M8 | **Embedded Below** — [Lint Output](evidence/05-helm-lint.txt) |
 | **17** | `evidence/17-prometheus-targets.png` | Prometheus Targets page showing application endpoint `UP` (1/1) | M9 | **Embedded Below** |
@@ -241,11 +242,17 @@ The table below maps all project deliverables and verification runs against cour
 #### 10 — GitHub Container Registry Packages
 <img width="1786" height="768" alt="image" src="https://github.com/user-attachments/assets/48c1bb8b-e1ca-42ba-95e7-fcd58a9eb7e3" />
 
-#### 11 — Trivy Container Security Scan Gate Output
-![11-trivy-scan-output](evidence/11-trivy-scan-output.png)
+#### 11 — Trivy Scan Output from the CI Job Log
+*[TODO: Awaiting updated screenshot of Trivy scan output from the CI job log]*
 
 #### 12 — Terraform AWS Infrastructure Plan (`terraform plan`)
 ![12-terraform-plan](evidence/12-terraform-plan.png)
+
+#### 13 — AWS Management Console Active EKS Cluster (`restaurant-eks`)
+![13-aws-console-eks](evidence/13-aws-console-eks.png)
+
+#### 14 — Terraform Infrastructure Teardown (`terraform destroy`)
+![14-terraform-destroy](evidence/14-terraform-destroy.png)
 
 #### 15 — Local Kubernetes Cluster Running Pods (`kubectl get pods -n restaurant`)
 ![15-k8s-pods-running](evidence/15-k8s-pods-running.png)

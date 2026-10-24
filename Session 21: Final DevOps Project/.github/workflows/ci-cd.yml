@@ -85,11 +85,11 @@ jobs:
 
       - name: Scan backend image with Trivy (Security Gate)
         run: |
-          trivy image --severity HIGH,CRITICAL --ignore-unfixed --format table ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-backend:${{ github.sha }}
+          trivy image --severity HIGH,CRITICAL --ignore-unfixed --exit-code 1 --format table ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-backend:${{ github.sha }}
 
       - name: Scan frontend image with Trivy (Security Gate)
         run: |
-          trivy image --severity HIGH,CRITICAL --ignore-unfixed --format table ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-frontend:${{ github.sha }}
+          trivy image --severity HIGH,CRITICAL --ignore-unfixed --exit-code 1 --format table ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-frontend:${{ github.sha }}
 
       - name: Push images to GHCR
         run: |

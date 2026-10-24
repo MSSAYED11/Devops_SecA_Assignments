@@ -31,22 +31,22 @@
 - **Evidence**: Commit history screenshot ([`evidence/08-git-commit-history.png`](evidence/08-git-commit-history.png)).
 
 ### M4 — Docker: Containerization & Compose (10/10 pts)
-- [x] `backend/Dockerfile` multi-stage build running as non-root `appuser` (UID 10001).
-- [x] `frontend/Dockerfile` multi-stage build running unprivileged Nginx on port 8080 as non-root `nginx` (UID 101).
+- [x] `backend/Dockerfile` single-stage build running as non-root `appuser` (UID 10001).
+- [x] `frontend/Dockerfile` multi-stage build (only the frontend is multi-stage) running unprivileged Nginx on port 8080 as non-root `nginx` (UID 101).
 - [x] `docker-compose.yml` orchestrating all 3 services with healthchecks.
 - **Evidence**: [`evidence/01-docker-compose-ps.png`](evidence/01-docker-compose-ps.png) and [`evidence/02-docker-images.png`](evidence/02-docker-images.png).
 
 ### M5 — CI/CD: GitHub Actions Pipeline (15/15 pts)
 - [x] Pipeline `.github/workflows/ci-cd.yml` triggers on push to `main`.
-- [x] Automatic execution of Pytest test suite and Vite frontend build.
+- [x] Automatic execution of Pytest test suite (Python 3.12) and Vite frontend build (Node.js 20 LTS).
 - [x] Multi-platform Docker builds pushed to GitHub Container Registry (GHCR) tagged with Git commit SHA and `latest`.
 - **Evidence**: [`evidence/09-github-actions-pipeline.png`](evidence/09-github-actions-pipeline.png) and [`evidence/10-ghcr-packages.png`](evidence/10-ghcr-packages.png).
 
 ### M6 — DevSecOps: Trivy Security Scan (5/5 pts)
 - [x] Trivy scans both frontend and backend images in CI.
-- [x] Gating policy: pipeline immediately fails on unfixed `HIGH` or `CRITICAL` severity CVEs (`exit-code: 1`).
+- [x] Gating policy: pipeline immediately fails on fixable `HIGH` or `CRITICAL` severity CVEs (`--severity HIGH,CRITICAL --ignore-unfixed --exit-code 1`).
 - [x] Written CVE explanation in [`trivy-explanation.md`](trivy-explanation.md).
-- **Evidence**: [`evidence/11-trivy-scan-output.png`](evidence/11-trivy-scan-output.png) and [`trivy-explanation.md`](trivy-explanation.md).
+- **Evidence**: Trivy scan output from the CI job log ([`evidence/11-trivy-scan-output.png`](evidence/11-trivy-scan-output.png) - TODO) and [`trivy-explanation.md`](trivy-explanation.md).
 
 ### M7 — Terraform: AWS Infrastructure as Code (15/15 pts)
 - [x] Terraform manifests in `terraform/` specifying VPC (2 public subnets) and managed EKS cluster.
