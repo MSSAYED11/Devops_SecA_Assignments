@@ -1,0 +1,4 @@
+NAME                          IMAGE                                                                     COMMAND                  SERVICE    CREATED         STATUS                 PORTS
+session21-python-backend-1    sha256:fd0483cf8da4e4291824b6ed958e45fcd9ee50b936c25265ccc658f11df384a3   "sh -c 'alembic upgrâ€¦"   backend    2 hours ago     Up 2 hours             0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+session21-python-frontend-1   session21-python-frontend                                                 "/docker-entrypoint.â€¦"   frontend   6 minutes ago   Up 6 minutes           0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp
+session21-python-postgres-1   postgres:16-alpine                                                        "docker-entrypoint.sâ€¦"   postgres   18 hours ago    Up 3 hours (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp

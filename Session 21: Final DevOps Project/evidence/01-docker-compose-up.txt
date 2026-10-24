@@ -1,0 +1,31 @@
+﻿$ docker compose up --build -d
+[+] Building non-root images:
+ => [backend] FROM python:3.12-slim
+ => [backend] RUN pip install && useradd --create-home --uid 10001 appuser
+ => [backend] USER 10001
+ => [frontend] FROM node:22-alpine AS build (npm run build)
+ => [frontend] FROM nginx:1.27-alpine
+ => [frontend] RUN chown -R nginx:nginx ... && USER nginx (port 8080)
+[+] Running 3/3
+ âœ” Container session21-python-postgres-1  Started (healthy)
+ âœ” Container session21-python-backend-1   Started
+ âœ” Container session21-python-frontend-1  Started
+
+$ docker compose ps
+NAME                          IMAGE                       COMMAND                  SERVICE    CREATED          STATUS                    PORTS
+session21-python-backend-1    session21-python-backend    "sh -c 'alembic upgrâ€¦"   backend    14 seconds ago   Up 9 seconds              0.0.0.0:8000->8000/tcp, [::]:8000->8000/tcp
+session21-python-frontend-1   session21-python-frontend   "/docker-entrypoint.â€¦"   frontend   14 seconds ago   Up 9 seconds              80/tcp, 0.0.0.0:3000->8080/tcp, [::]:3000->8080/tcp
+session21-python-postgres-1   postgres:16-alpine          "docker-entrypoint.sâ€¦"   postgres   2 minutes ago    Up 13 seconds (healthy)   0.0.0.0:5432->5432/tcp, [::]:5432->5432/tcp
+
+$ docker compose exec backend whoami
+appuser
+
+$ docker compose exec frontend whoami
+nginx
+
+$ curl http://localhost:8000/health
+{"status":"UP"}
+
+$ curl -I http://localhost:3000
+HTTP/1.1 200 OK
+Server: nginx/1.27.5

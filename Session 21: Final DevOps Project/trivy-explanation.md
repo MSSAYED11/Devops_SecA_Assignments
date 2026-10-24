@@ -1,0 +1,3 @@
+# Trivy Security Scanning in CI/CD
+
+Trivy automatically scans both the frontend (Nginx) and backend (FastAPI) container images during the GitHub Actions pipeline, inspecting OS base packages and application dependencies for known Common Vulnerabilities and Exposures (CVEs). It actively gates the pipeline by enforcing `exit-code: 1` on any unfixed HIGH or CRITICAL severity vulnerabilities, ensuring no vulnerable container images are ever pushed to GitHub Container Registry (GHCR). A clean scan confirms that all installed packages and runtime dependencies adhere to container security benchmarks without exploitable security risks.

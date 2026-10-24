@@ -1,0 +1,15 @@
+﻿$ curl http://localhost:8000/health
+{"status":"UP"}
+
+$ curl http://localhost:8000/ready
+{"status":"READY"}
+
+$ curl http://localhost:8000/api/stats
+{"total_menu_items":0,"total_tables":0,"active_reservations":0,"active_orders":0,"total_revenue":0.0}
+
+$ curl -I http://localhost:3000
+HTTP/1.1 200 OK
+Server: nginx/1.27.5
+Content-Type: text/html
+Content-Length: 744
+Connection: keep-alive

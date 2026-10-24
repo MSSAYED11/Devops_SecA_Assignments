@@ -1,0 +1,22 @@
+﻿$ python -m pytest -v backend/tests
+============================= test session starts =============================
+platform win32 -- Python 3.12.10, pytest-8.3.4, pluggy-1.6.0 -- C:\Users\mssay\AppData\Local\Programs\Python\Python312\python.exe
+cachedir: .pytest_cache
+rootdir: C:\Users\mssay\Desktop\Devops_project\session21-python\backend
+configfile: pytest.ini
+plugins: anyio-4.15.1, platformdirs-4.13.0, cov-7.1.0
+collecting ... collected 11 items
+
+backend\tests\test_api.py::test_health PASSED                            [  9%]
+backend\tests\test_api.py::test_root PASSED                              [ 18%]
+backend\tests\test_api.py::test_ready PASSED                             [ 27%]
+backend\tests\test_api.py::test_menu_item_crud PASSED                    [ 36%]
+backend\tests\test_api.py::test_dining_table_crud_and_uniqueness PASSED  [ 45%]
+backend\tests\test_api.py::test_reservation_capacity_exceeded PASSED     [ 54%]
+backend\tests\test_api.py::test_reservation_prevent_double_booking PASSED [ 63%]
+backend\tests\test_api.py::test_order_totals_calculation PASSED          [ 72%]
+backend\tests\test_api.py::test_order_status_valid_transition PASSED     [ 81%]
+backend\tests\test_api.py::test_order_status_invalid_transition PASSED   [ 90%]
+backend\tests\test_api.py::test_stats_and_delete_menu_item PASSED        [100%]
+
+======================= 11 passed, 3 warnings in 1.92s ========================
