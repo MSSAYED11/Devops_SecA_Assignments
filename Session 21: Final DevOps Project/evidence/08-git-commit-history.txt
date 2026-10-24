@@ -1,0 +1,12 @@
+2d37db5 feat(backend): implement relational database models, schemas, and configurations
+a18f2cb ci(devsecops): configure github actions pipeline with trivy security gating and docs
+0c5d998 feat(observability): add prometheus metrics scraping and troubleshooting runbook
+7b275f8 feat(terraform): configure cost-optimized aws vpc and managed eks cluster modules
+eb48e1c feat(k8s): define restaurant namespace and configure production helm chart
+6fd8617 feat(compose): add docker-compose stack with postgres healthcheck
+8be71b8 feat(frontend): build dark-luxury react ui with banner assets and live kpi dashboard
+a93fb28 feat(docker): containerize backend with non-root appuser
+6f86e0c test(backend): add pytest suite covering health, crud, capacity, and fsm transitions
+cd2a529 feat(api): implement restaurant business rules and rest api routes
+8655c42 feat(db): add alembic database migrations for restaurant entities
+fcfad38 chore: initialize repository structure and security ignore rules

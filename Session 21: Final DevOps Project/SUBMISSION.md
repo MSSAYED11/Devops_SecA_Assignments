@@ -59,14 +59,16 @@
 - [x] Kubernetes manifests and namespace definition in `k8s/namespace.yaml`.
 - [x] Helm chart in `helm/restaurant/` with Deployments (2 replicas), ClusterIP Services, Ingress, and HPA.
 - [x] Linting verified (`0 chart(s) failed`).
+- [x] Local cluster deployment verified on Kind (`restaurant` namespace, 5 pods running).
 - [x] Troubleshooting drills and notes in `troubleshooting/README.md`.
-- **Evidence**: [`evidence/05-helm-lint.txt`](evidence/05-helm-lint.txt), [`troubleshooting/README.md`](troubleshooting/README.md).
+- **Evidence**: [`evidence/15-k8s-pods-running.png`](evidence/15-k8s-pods-running.png), [`evidence/16-helm-list-ingress.png`](evidence/16-helm-list-ingress.png), [`evidence/05-helm-lint.txt`](evidence/05-helm-lint.txt), [`troubleshooting/README.md`](troubleshooting/README.md).
 
 ### M9 — Observability: Prometheus + Grafana (10/10 pts)
 - [x] Backend Prometheus metrics instrumented at `/metrics`.
 - [x] Helm monitoring values for Prometheus and Grafana in `monitoring/`.
-- [x] ServiceMonitor configuration targeting application metrics.
-- **Evidence**: [`evidence/04-backend-metrics.png`](evidence/04-backend-metrics.png) and [`evidence/04-backend-metrics.txt`](evidence/04-backend-metrics.txt).
+- [x] Prometheus target discovery scraping backend endpoint (`UP 1/1`).
+- [x] Grafana production dashboard visualizing live HTTP request rates, response times, and memory.
+- **Evidence**: [`evidence/17-prometheus-targets.png`](evidence/17-prometheus-targets.png), [`evidence/18-grafana-dashboard.png`](evidence/18-grafana-dashboard.png), [`evidence/04-backend-metrics.png`](evidence/04-backend-metrics.png).
 
 ### M10 — Final Presentation & Documentation (5/5 pts)
 - [x] Comprehensive root [`README.md`](README.md) with architecture diagram, local quickstart, API documentation, and embedded run evidence.

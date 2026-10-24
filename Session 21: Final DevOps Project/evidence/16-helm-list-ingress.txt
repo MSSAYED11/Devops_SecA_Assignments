@@ -1,0 +1,11 @@
+NAME      	NAMESPACE 	REVISION	UPDATED                              	STATUS  	CHART        	APP VERSION
+restaurant	restaurant	2       	2026-10-23 20:54:36.1834775 +0530 IST	deployed	savoria-1.0.0	1.0.0
+
+NAME                                     TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)    AGE
+service/backend                          ClusterIP   10.96.5.53      <none>        8000/TCP   109s
+service/restaurant-postgres              ClusterIP   10.96.4.148     <none>        5432/TCP   4m40s
+service/restaurant-restaurant-backend    ClusterIP   10.96.47.211    <none>        8000/TCP   4m40s
+service/restaurant-restaurant-frontend   ClusterIP   10.96.196.208   <none>        80/TCP     4m40s
+
+NAME                                                      CLASS   HOSTS              ADDRESS   PORTS   AGE
+ingress.networking.k8s.io/restaurant-restaurant-ingress   nginx   restaurant.local             80      4m40s

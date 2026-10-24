@@ -1,0 +1,6 @@
+NAME                                             READY   STATUS    RESTARTS   AGE
+restaurant-postgres-766984bd65-9782d             1/1     Running   0          4m40s
+restaurant-restaurant-backend-6d76577df6-48s5z   1/1     Running   0          93s
+restaurant-restaurant-backend-6d76577df6-rv888   1/1     Running   0          93s
+restaurant-restaurant-frontend-966b688c7-hns65   1/1     Running   0          94s
+restaurant-restaurant-frontend-966b688c7-vwpds   1/1     Running   0          94s

@@ -1,0 +1,24 @@
+}
+      + tags_all                           = {
+          + "Environment"           = "dev"
+          + "ManagedBy"             = "Terraform"
+          + "Project"               = "Savoria"
+          + "terraform-aws-modules" = "eks"
+        }
+    }
+
+  # module.eks.module.eks_managed_node_group["main"].module.user_data.null_resource.validate_cluster_service_cidr will be created
+  + resource "null_resource" "validate_cluster_service_cidr" {
+      + id = (known after apply)
+    }
+
+Plan: 49 to add, 0 to change, 0 to destroy.
+
+Changes to Outputs:
+  + cluster_endpoint = (known after apply)
+  + cluster_name     = "restaurant-eks"
+  + vpc_id           = (known after apply)
+
+─────────────────────────────────────────────────────────────────────────────
+
+Note: You didn't use the -out option to save this plan, so Terraform can't

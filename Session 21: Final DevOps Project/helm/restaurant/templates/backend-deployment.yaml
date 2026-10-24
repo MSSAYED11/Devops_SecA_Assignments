@@ -16,6 +16,7 @@ spec:
       containers:
         - name: backend
           image: "{{ .Values.backend.image }}:{{ .Values.backend.tag }}"
+          imagePullPolicy: {{ default "IfNotPresent" .Values.backend.imagePullPolicy }}
           ports: [{containerPort: 8000, name: http}]
           env:
             - name: DATABASE_URL

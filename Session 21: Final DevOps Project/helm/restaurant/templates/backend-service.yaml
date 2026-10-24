@@ -12,3 +12,17 @@ spec:
     - port: 8000
       targetPort: 8000
       name: http
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: backend
+  labels:
+    app: restaurant-backend
+spec:
+  type: ClusterIP
+  selector: {app: restaurant-backend}
+  ports:
+    - port: 8000
+      targetPort: 8000
+      name: http

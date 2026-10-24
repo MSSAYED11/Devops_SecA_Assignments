@@ -180,19 +180,22 @@ The table below maps all project deliverables and verification runs against cour
 | **03** | `evidence/03-pytest-passing.png` | `pytest -v` (11/11 tests passing with SQLite isolated DB) | M2 | **Embedded Below** — [Raw Run Output](evidence/03-pytest-passing.txt) |
 | **04** | `evidence/04-backend-metrics.png` | `curl.exe http://localhost:8000/metrics` (first 25 lines Prometheus format) | M9 | **Embedded Below** — [Raw Run Output](evidence/04-backend-metrics.txt) |
 | **05** | `evidence/05-app-dashboard.png` | Live browser at `http://localhost:3000` (Savoria Executive KPI Dashboard) | M1, M4 | **Embedded Below** |
+| **05b** | `evidence/05b-app-tables.png` | Live browser at `http://localhost:3000` (Dining Floor & Table Capacity) | M1, M4 | **Embedded Below** |
+| **05c** | `evidence/05c-app-reservations.png` | Live browser at `http://localhost:3000` (Guest Table Reservations & Validation) | M1, M4 | **Embedded Below** |
+| **05d** | `evidence/05d-app-orders.png` | Live browser at `http://localhost:3000` (Kitchen POS Order Lifecycle Management) | M1, M4 | **Embedded Below** |
 | **06** | `evidence/06-app-menu.png` | Live browser at `http://localhost:3000` (Menu Catalog & Management view) | M1, M4 | **Embedded Below** |
 | **07** | `evidence/07-swagger-docs.png` | Live browser at `http://localhost:8000/docs` (FastAPI Swagger UI endpoints) | M1 | **Embedded Below** |
-| **08** | `evidence/08-git-commit-history.png` | `git log --oneline -n 15` (structured commit history $\ge$ 10 commits) | M3 | `TODO` |
-| **09** | `evidence/09-github-actions-pipeline.png` | GitHub Actions green pipeline run (Test, Trivy Scan, Build & Push) | M5 | `TODO` |
-| **10** | `evidence/10-ghcr-packages.png` | GitHub Container Registry packages with commit SHA tags | M5 | `TODO` |
-| **11** | `evidence/11-trivy-scan-output.png` | Trivy scan output passing with 0 HIGH/CRITICAL CVEs | M6 | `TODO` — (See [trivy-explanation.md](trivy-explanation.md)) |
-| **12** | `evidence/12-terraform-plan.png` | `terraform plan` execution output for AWS VPC & EKS | M7 | `TODO` — [Init/Validate Output](evidence/04-terraform-validate.txt) |
-| **13** | `evidence/13-aws-console-eks.png` | AWS Management Console showing active VPC and EKS cluster | M7 | `TODO` |
-| **14** | `evidence/14-terraform-destroy.png` | `terraform destroy` confirmation showing 0 orphaned AWS resources | M7 | `TODO` |
-| **15** | `evidence/15-k8s-pods-running.png` | `kubectl get pods -n restaurant` showing all pods `Running` | M8 | `TODO` |
-| **16** | `evidence/16-helm-list-ingress.png` | `helm list -n restaurant` and Ingress hostname routing | M8 | `TODO` — [Lint Output](evidence/05-helm-lint.txt) & [Troubleshooting Guide](troubleshooting/README.md) |
-| **17** | `evidence/17-prometheus-targets.png` | Prometheus Targets page showing application endpoint `UP` (1/1) | M9 | `TODO` |
-| **18** | `evidence/18-grafana-dashboard.png` | Grafana Dashboard with populated request latency/rate panels | M9 | `TODO` |
+| **08** | `evidence/08-git-commit-history.png` | `git log --oneline -n 12` (structured, conventional commit history) | M3 | **Embedded Below** |
+| **09** | `evidence/09-github-actions-pipeline.png` | GitHub Actions green pipeline run (Test, Trivy Scan, Build & Push) | M5 | `TODO (Post Git Push)` |
+| **10** | `evidence/10-ghcr-packages.png` | GitHub Container Registry packages with commit SHA tags | M5 | `TODO (Post Git Push)` |
+| **11** | `evidence/11-trivy-scan-output.png` | Trivy scan output passing with 0 HIGH/CRITICAL CVEs | M6 | `TODO (Post Git Push)` — (See [trivy-explanation.md](trivy-explanation.md)) |
+| **12** | `evidence/12-terraform-plan.png` | `terraform plan` execution output for AWS VPC & EKS | M7 | **Embedded Below** — [Init/Validate Output](evidence/04-terraform-validate.txt) |
+| **13** | `evidence/13-aws-console-eks.png` | AWS Management Console showing active VPC and EKS cluster | M7 | `TODO (Post Terraform Apply)` |
+| **14** | `evidence/14-terraform-destroy.png` | `terraform destroy` confirmation showing 0 orphaned AWS resources | M7 | `TODO (Post Teardown)` |
+| **15** | `evidence/15-k8s-pods-running.png` | `kubectl get pods -n restaurant` showing all pods `Running` | M8 | **Embedded Below** |
+| **16** | `evidence/16-helm-list-ingress.png` | `helm list -n restaurant` and Ingress hostname routing | M8 | **Embedded Below** — [Lint Output](evidence/05-helm-lint.txt) |
+| **17** | `evidence/17-prometheus-targets.png` | Prometheus Targets page showing application endpoint `UP` (1/1) | M9 | **Embedded Below** |
+| **18** | `evidence/18-grafana-dashboard.png` | Grafana Dashboard with populated request latency/rate panels | M9 | **Embedded Below** |
 | **19** | `evidence/19-demo-video-link.txt` | 2-3 minute video walkthrough of application & pipeline | M10 | `TODO` |
 
 ---
@@ -214,10 +217,38 @@ The table below maps all project deliverables and verification runs against cour
 #### 05 — Executive Dashboard (`http://localhost:3000`)
 ![05-app-dashboard](evidence/05-app-dashboard.png)
 
+#### 05b — Dining Floor & Table Capacity (`http://localhost:3000`)
+![05b-app-tables](evidence/05b-app-tables.png)
+
+#### 05c — Guest Reservations & Booking Constraints (`http://localhost:3000`)
+![05c-app-reservations](evidence/05c-app-reservations.png)
+
+#### 05d — Kitchen Orders & POS Lifecycle (`http://localhost:3000`)
+![05d-app-orders](evidence/05d-app-orders.png)
+
 #### 06 — Menu Catalog & Management (`http://localhost:3000`)
 ![06-app-menu](evidence/06-app-menu.png)
 
 #### 07 — FastAPI Interactive Swagger REST Documentation (`http://localhost:8000/docs`)
 ![07-swagger-docs](evidence/07-swagger-docs.png)
+
+#### 08 — Git Structured Commit History (`git log --oneline -n 12`)
+![08-git-commit-history](evidence/08-git-commit-history.png)
+
+#### 12 — Terraform AWS Infrastructure Plan (`terraform plan`)
+![12-terraform-plan](evidence/12-terraform-plan.png)
+
+#### 15 — Local Kubernetes Cluster Running Pods (`kubectl get pods -n restaurant`)
+![15-k8s-pods-running](evidence/15-k8s-pods-running.png)
+
+#### 16 — Helm Chart Deployment & Ingress Routing (`helm list & kubectl get svc,ingress`)
+![16-helm-list-ingress](evidence/16-helm-list-ingress.png)
+
+#### 17 — Prometheus Scrape Targets UI (`http://localhost:9090/targets`)
+![17-prometheus-targets](evidence/17-prometheus-targets.png)
+
+#### 18 — Grafana Production Metrics Dashboard (`http://localhost:3001`)
+![18-grafana-dashboard](evidence/18-grafana-dashboard.png)
+
 
 
