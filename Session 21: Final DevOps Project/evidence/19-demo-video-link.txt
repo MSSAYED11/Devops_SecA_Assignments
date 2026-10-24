@@ -1,0 +1,13 @@
+Session 21: Final DevOps Project — Savoria Restaurant Management System
+Author: M S Sayed
+Roll Number: 10396
+Email: sayed.24bcs10396@sst.scaler.com
+Repository: https://github.com/MSSAYED11/Devops_SecA_Assignments/tree/main/Session%2021%3A%20Final%20DevOps%20Project
+
+Project Demonstration & Walkthrough:
+- YouTube Demo Video: https://youtu.be/CR20rCj1bJE
+- Video Preview / Alternate Link: https://youtu.be/pZ3LgxX7W6I
+
+Executive Presentation:
+- PDF Slide Deck: demo/Savoria_Presentation.pdf
+- PPTX Slide Deck: demo/Savoria_Presentation.pptx

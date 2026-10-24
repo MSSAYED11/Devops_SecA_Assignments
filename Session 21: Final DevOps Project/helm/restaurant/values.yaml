@@ -1,9 +1,9 @@
 frontend:
-  image: ghcr.io/MSSAYED11/restaurant-frontend
+  image: ghcr.io/mssayed11/restaurant-frontend
   tag: latest
   replicaCount: 2
 backend:
-  image: ghcr.io/MSSAYED11/restaurant-backend
+  image: ghcr.io/mssayed11/restaurant-backend
   tag: latest
   replicaCount: 2
 replicaCount: 2

@@ -32,9 +32,10 @@ dist-ssr/
 .idea/
 .vscode/
 .DS_Store
-# Binaries
+# Binaries and Media
 *.exe
 kind.exe
+*.mp4
 temp_repo/
 
 

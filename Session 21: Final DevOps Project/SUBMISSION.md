@@ -1,10 +1,12 @@
 # DevOps Final Capstone — Submission Deliverables
 
 **Student**: M S Sayed  
+**Roll Number**: 10396  
 **GitHub Username**: [@MSSAYED11](https://github.com/MSSAYED11)  
-**Email**: mssayed1108@gmail.com  
+**Email**: sayed.24bcs10396@sst.scaler.com  
 **Repository**: [https://github.com/MSSAYED11/Devops_SecA_Assignments/tree/main/Session%2021%3A%20Final%20DevOps%20Project](https://github.com/MSSAYED11/Devops_SecA_Assignments/tree/main/Session%2021%3A%20Final%20DevOps%20Project)  
-**Walkthrough Video / Live Demo**: [TODO: Insert link here]
+**Walkthrough Video / Live Demo**: [Watch Walkthrough on YouTube](https://youtu.be/CR20rCj1bJE)  
+**Executive Presentation Slide Deck**: [Savoria Presentation (PDF)](demo/Savoria_Presentation.pdf) • [Savoria Presentation (PPTX)](demo/Savoria_Presentation.pptx)  
 
 ---
 
@@ -46,7 +48,7 @@
 - [x] Trivy scans both frontend and backend images in CI.
 - [x] Gating policy: pipeline immediately fails on fixable `HIGH` or `CRITICAL` severity CVEs (`--severity HIGH,CRITICAL --ignore-unfixed --exit-code 1`).
 - [x] Written CVE explanation in [`trivy-explanation.md`](trivy-explanation.md).
-- **Evidence**: Trivy scan output from the CI job log ([`evidence/11-trivy-scan-output.png`](evidence/11-trivy-scan-output.png) - TODO) and [`trivy-explanation.md`](trivy-explanation.md).
+- **Evidence**: Trivy scan output from the CI job log ([`evidence/11-trivy-scan-output.png`](evidence/11-trivy-scan-output.png)) and [`trivy-explanation.md`](trivy-explanation.md).
 
 ### M7 — Terraform: AWS Infrastructure as Code (15/15 pts)
 - [x] Terraform manifests in `terraform/` specifying VPC (2 public subnets) and managed EKS cluster.
@@ -73,4 +75,6 @@
 ### M10 — Final Presentation & Documentation (5/5 pts)
 - [x] Comprehensive root [`README.md`](README.md) with architecture diagram, local quickstart, API documentation, and embedded run evidence.
 - [x] Troubleshooting runbook in [`troubleshooting/README.md`](troubleshooting/README.md).
-- [ ] Recorded walkthrough video / live demonstration.
+- [x] Recorded walkthrough video / live demonstration: [Watch on YouTube](https://youtu.be/CR20rCj1bJE).
+- [x] Executive slide deck presentation: [demo/Savoria_Presentation.pdf](demo/Savoria_Presentation.pdf) • [demo/Savoria_Presentation.pptx](demo/Savoria_Presentation.pptx).
+- **Evidence**: [`evidence/19-demo-video-link.txt`](evidence/19-demo-video-link.txt), [`demo/Savoria_Presentation.pdf`](demo/Savoria_Presentation.pdf).
