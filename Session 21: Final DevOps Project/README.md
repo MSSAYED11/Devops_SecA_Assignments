@@ -186,9 +186,9 @@ The table below maps all project deliverables and verification runs against cour
 | **06** | `evidence/06-app-menu.png` | Live browser at `http://localhost:3000` (Menu Catalog & Management view) | M1, M4 | **Embedded Below** |
 | **07** | `evidence/07-swagger-docs.png` | Live browser at `http://localhost:8000/docs` (FastAPI Swagger UI endpoints) | M1 | **Embedded Below** |
 | **08** | `evidence/08-git-commit-history.png` | `git log --oneline -n 12` (structured, conventional commit history) | M3 | **Embedded Below** |
-| **09** | `evidence/09-github-actions-pipeline.png` | GitHub Actions green pipeline run (Test, Trivy Scan, Build & Push) | M5 | `TODO (Post Git Push)` |
-| **10** | `evidence/10-ghcr-packages.png` | GitHub Container Registry packages with commit SHA tags | M5 | `TODO (Post Git Push)` |
-| **11** | `evidence/11-trivy-scan-output.png` | Trivy scan output passing with 0 HIGH/CRITICAL CVEs | M6 | `TODO (Post Git Push)` — (See [trivy-explanation.md](trivy-explanation.md)) |
+| **09** | `evidence/09-github-actions-pipeline.png` | GitHub Actions green pipeline run (Test, Trivy Scan, Build & Push) | M5 | **Embedded Below** — [Live Run](https://github.com/MSSAYED11/Devops_SecA_Assignments/actions/runs/40064567048) |
+| **10** | `evidence/10-ghcr-packages.png` | GitHub Container Registry packages with commit SHA tags | M5 | **Embedded Below** — [Packages](https://github.com/MSSAYED11?tab=packages) |
+| **11** | `evidence/11-trivy-scan-output.png` | Trivy scan output passing with 0 HIGH/CRITICAL CVEs | M6 | **Embedded Below** — (See [trivy-explanation.md](trivy-explanation.md)) |
 | **12** | `evidence/12-terraform-plan.png` | `terraform plan` execution output for AWS VPC & EKS | M7 | **Embedded Below** — [Init/Validate Output](evidence/04-terraform-validate.txt) |
 | **13** | `evidence/13-aws-console-eks.png` | AWS Management Console showing active VPC and EKS cluster | M7 | `TODO (Post Terraform Apply)` |
 | **14** | `evidence/14-terraform-destroy.png` | `terraform destroy` confirmation showing 0 orphaned AWS resources | M7 | `TODO (Post Teardown)` |
@@ -234,6 +234,15 @@ The table below maps all project deliverables and verification runs against cour
 
 #### 08 — Git Structured Commit History (`git log --oneline -n 12`)
 ![08-git-commit-history](evidence/08-git-commit-history.png)
+
+#### 09 — GitHub Actions CI/CD Pipeline (100% Green Run)
+![09-github-actions-pipeline](evidence/09-github-actions-pipeline.png)
+
+#### 10 — GitHub Container Registry Packages
+![10-ghcr-packages](evidence/10-ghcr-packages.png)
+
+#### 11 — Trivy Container Security Scan Gate Output
+![11-trivy-scan-output](evidence/11-trivy-scan-output.png)
 
 #### 12 — Terraform AWS Infrastructure Plan (`terraform plan`)
 ![12-terraform-plan](evidence/12-terraform-plan.png)
