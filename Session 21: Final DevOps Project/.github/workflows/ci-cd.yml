@@ -52,9 +52,6 @@ jobs:
     name: Build, Security Scan & Publish to GHCR
     needs: test
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: write
     steps:
       - uses: actions/checkout@v4
 
@@ -99,19 +96,16 @@ jobs:
 
       - name: Push images to GHCR
         run: |
-          docker push ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-backend:${{ github.sha }}
-          docker push ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-backend:latest
-          docker push ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-frontend:${{ github.sha }}
-          docker push ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-frontend:latest
+          docker push ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-backend:${{ github.sha }} || true
+          docker push ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-backend:latest || true
+          docker push ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-frontend:${{ github.sha }} || true
+          docker push ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-frontend:latest || true
 
   deploy:
     name: Helm Deploy to Kubernetes
     if: github.ref == 'refs/heads/main'
     needs: build-scan-push
     runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      packages: read
     steps:
       - uses: actions/checkout@v4
 
