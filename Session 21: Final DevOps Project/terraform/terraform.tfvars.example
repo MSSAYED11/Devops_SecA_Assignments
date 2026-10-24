@@ -1,0 +1,4 @@
+# Terraform Variables Example (Placeholders only - do not commit real credentials)
+aws_region   = "ap-south-1"
+cluster_name = "restaurant-eks"
+environment  = "dev"
