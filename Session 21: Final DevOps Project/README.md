@@ -171,7 +171,7 @@ Located in [`helm/restaurant/`](helm/restaurant/):
 
 ## 7. Submission Evidence & Rubric Mapping
 
-The table below maps all project deliverables and verification runs against course modules **M1 through M10**. All verification runs, live application pages, CI/CD pipeline executions, and AWS EKS/Terraform lifecycle operations have been captured and verified as real PNGs embedded below.
+The table below maps all project deliverables and verification runs against course modules **M1 through M10**. All verification runs, live application pages, CI/CD pipeline executions, and AWS EKS and VPC Terraform lifecycle and cleanup operations have been captured and verified as real PNGs embedded below.
 
 | # | File | What It Shows | Rubric Module | Status / Evidence |
 |---|------|---------------|---------------|-------------------|
@@ -190,9 +190,12 @@ The table below maps all project deliverables and verification runs against cour
 | **10** | `evidence/10-ghcr-packages.png` | GitHub Container Registry packages with commit SHA tags | M5 | **Embedded Below** — [Packages](https://github.com/MSSAYED11?tab=packages) |
 | **11** | `evidence/11-trivy-scan-output.png` | Trivy scan output from the CI job log | M6 | `TODO` — (See [trivy-explanation.md](trivy-explanation.md)) |
 | **12** | `evidence/12-terraform-plan.png` | `terraform plan` execution output for AWS VPC & EKS | M7 | **Embedded Below** — [Init/Validate Output](evidence/04-terraform-validate.txt) |
-| **13** | `evidence/13-aws-console-eks.png` | AWS Management Console showing active VPC and EKS cluster | M7 | **Embedded Below** |
-| **13b** | `evidence/13b-aws-console-vpc.png` | AWS Management Console showing provisioned VPC and subnets | M7 | `TODO` |
-| **14** | `evidence/14-terraform-destroy.png` | `terraform destroy` confirmation showing 0 orphaned AWS resources | M7 | **Embedded Below** |
+| **13** | `evidence/13-aws-console-eks.png` | AWS Management Console active EKS cluster (`restaurant-eks`) | M7 | **Embedded Below** |
+| **13b** | `evidence/13b-terraform-apply-vpc.png` | `terraform apply -target=module.vpc` output (VPC only, 11 resources) | M7 | **Embedded Below** |
+| **13c** | `evidence/13c-aws-console-vpc.png` | AWS Management Console VPC dashboard showing provisioned VPC & subnets | M7 | **Embedded Below** |
+| **14** | `evidence/14-terraform-destroy.png` | `terraform destroy` confirmation (Full cluster teardown, 49 resources destroyed) | M7 | **Embedded Below** |
+| **14-vpc** | `evidence/14-terraform-destroy-vpc.png` | `terraform destroy` output (VPC only teardown, 11 resources destroyed) | M7 | **Embedded Below** |
+| **14b** | `evidence/14b-aws-cleanup-check.png` | AWS CLI read-only cleanup verification check in `ap-south-1` | M7 | **Embedded Below** — [Raw Run Output](evidence/14b-aws-cleanup-check.txt) |
 | **15** | `evidence/15-k8s-pods-running.png` | `kubectl get pods -n restaurant` showing all pods `Running` | M8 | **Embedded Below** |
 | **16** | `evidence/16-helm-list-ingress.png` | `helm list -n restaurant` and Ingress hostname routing | M8 | **Embedded Below** — [Lint Output](evidence/05-helm-lint.txt) |
 | **17** | `evidence/17-prometheus-targets.png` | Prometheus Targets page showing application endpoint `UP` (1/1) | M9 | **Embedded Below** |
@@ -251,8 +254,20 @@ The table below maps all project deliverables and verification runs against cour
 #### 13 — AWS Management Console Active EKS Cluster (`restaurant-eks`)
 ![13-aws-console-eks](evidence/13-aws-console-eks.png)
 
-#### 14 — Terraform Infrastructure Teardown (`terraform destroy`)
+#### 13b — Terraform VPC Apply Output (`terraform apply -target=module.vpc` — VPC only, 11 resources)
+![13b-terraform-apply-vpc](evidence/13b-terraform-apply-vpc.png)
+
+#### 13c — AWS Management Console VPC Page (`restaurant-vpc`)
+![13c-aws-console-vpc](evidence/13c-aws-console-vpc.png)
+
+#### 14 — Terraform Infrastructure Teardown (`terraform destroy` — 49 resources destroyed)
 ![14-terraform-destroy](evidence/14-terraform-destroy.png)
+
+#### 14-vpc — Terraform VPC Teardown Output (`terraform destroy` — 11 destroyed)
+![14-terraform-destroy-vpc](evidence/14-terraform-destroy-vpc.png)
+
+#### 14b — AWS Infrastructure Cleanup Check (`ap-south-1` read-only verification)
+![14b-aws-cleanup-check](evidence/14b-aws-cleanup-check.png)
 
 #### 15 — Local Kubernetes Cluster Running Pods (`kubectl get pods -n restaurant`)
 ![15-k8s-pods-running](evidence/15-k8s-pods-running.png)
@@ -265,6 +280,3 @@ The table below maps all project deliverables and verification runs against cour
 
 #### 18 — Grafana Production Metrics Dashboard (`http://localhost:3001`)
 ![18-grafana-dashboard](evidence/18-grafana-dashboard.png)
-
-
-

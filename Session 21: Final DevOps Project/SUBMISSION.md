@@ -53,7 +53,7 @@
 - [x] Cost-optimized: no NAT gateway and 2x `t3.small` nodes.
 - [x] `terraform.tfvars.example` provided; no credentials committed.
 - [x] Validated locally (`Success! The configuration is valid`).
-- **Evidence**: [`evidence/04-terraform-validate.txt`](evidence/04-terraform-validate.txt) and [`evidence/12-terraform-plan.png`](evidence/12-terraform-plan.png).
+- **Evidence**: [`evidence/04-terraform-validate.txt`](evidence/04-terraform-validate.txt), [`evidence/12-terraform-plan.png`](evidence/12-terraform-plan.png), [`evidence/13-aws-console-eks.png`](evidence/13-aws-console-eks.png), [`evidence/13b-terraform-apply-vpc.png`](evidence/13b-terraform-apply-vpc.png), [`evidence/13c-aws-console-vpc.png`](evidence/13c-aws-console-vpc.png), [`evidence/14-terraform-destroy.png`](evidence/14-terraform-destroy.png), [`evidence/14-terraform-destroy-vpc.png`](evidence/14-terraform-destroy-vpc.png), and [`evidence/14b-aws-cleanup-check.png`](evidence/14b-aws-cleanup-check.png).
 
 ### M8 — Kubernetes + Helm (15/15 pts)
 - [x] Kubernetes manifests and namespace definition in `k8s/namespace.yaml`.

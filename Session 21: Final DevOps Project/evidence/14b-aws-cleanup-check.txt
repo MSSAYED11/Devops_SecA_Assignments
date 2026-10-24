@@ -1,0 +1,25 @@
+﻿=== AWS EKS Clusters (ap-south-1) ===
+{
+    "clusters": []
+}
+
+=== AWS EC2 NAT Gateways (ap-south-1) ===
+{
+    "NatGateways": []
+}
+
+=== AWS EC2 Instances (ap-south-1) ===
+[]
+
+=== AWS ELBv2 Load Balancers (ap-south-1) ===
+{
+    "LoadBalancers": []
+}
+
+=== AWS EC2 Volumes (ap-south-1) ===
+[]
+
+=== AWS EC2 Elastic IP Addresses (ap-south-1) ===
+{
+    "Addresses": []
+}
