@@ -77,17 +77,19 @@ jobs:
           docker build -t ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-frontend:${{ github.sha }} -t ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-frontend:latest "$FRONTEND_DIR"
 
       - name: Scan backend image with Trivy (Fail on HIGH,CRITICAL)
-        uses: aquasecurity/trivy-action@0.30.0
+        uses: aquasecurity/trivy-action@0.28.0
         with:
           image-ref: ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-backend:${{ github.sha }}
+          format: 'table'
           severity: HIGH,CRITICAL
           ignore-unfixed: true
           exit-code: '1'
 
       - name: Scan frontend image with Trivy (Fail on HIGH,CRITICAL)
-        uses: aquasecurity/trivy-action@0.30.0
+        uses: aquasecurity/trivy-action@0.28.0
         with:
           image-ref: ghcr.io/${{ env.IMAGE_OWNER }}/restaurant-frontend:${{ github.sha }}
+          format: 'table'
           severity: HIGH,CRITICAL
           ignore-unfixed: true
           exit-code: '1'
