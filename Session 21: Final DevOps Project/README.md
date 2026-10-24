@@ -239,7 +239,7 @@ The table below maps all project deliverables and verification runs against cour
 ![09-github-actions-pipeline](evidence/09-github-actions-pipeline.png)
 
 #### 10 — GitHub Container Registry Packages
-![10-ghcr-packages]<img width="1786" height="768" alt="image" src="https://github.com/user-attachments/assets/48c1bb8b-e1ca-42ba-95e7-fcd58a9eb7e3" />
+<img width="1786" height="768" alt="image" src="https://github.com/user-attachments/assets/48c1bb8b-e1ca-42ba-95e7-fcd58a9eb7e3" />
 
 #### 11 — Trivy Container Security Scan Gate Output
 ![11-trivy-scan-output](evidence/11-trivy-scan-output.png)
