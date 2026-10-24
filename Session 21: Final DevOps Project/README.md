@@ -9,7 +9,7 @@
 
 ## 🎥 Project Demonstration & Presentation
 
-- 🎬 **YouTube Demo Video**: [Watch Walkthrough on YouTube](https://youtu.be/S3wIm8jJelo)
+- 🎬 **Walkthrough Video**: [Watch on YouTube](https://youtu.be/S3wIm8jJelo) • [MP4 Recording (60.9 MB)](demo/Devops_Project_Demo.mp4)
 - 📊 **Executive Presentation (PPTX / PDF)**: [Savoria Presentation (PDF)](demo/Savoria_Presentation.pdf) • [Savoria Presentation (PPTX)](demo/Savoria_Presentation.pptx)
 
 [![Watch Walkthrough on YouTube](https://img.youtube.com/vi/S3wIm8jJelo/hqdefault.jpg)](https://youtu.be/S3wIm8jJelo)
@@ -361,7 +361,7 @@ The table below maps all project deliverables and verification runs against cour
 ![18-grafana-dashboard](evidence/18-grafana-dashboard.png)
 
 #### 19 — Project Demonstration Walkthrough & Presentation
-- 🎬 **YouTube Video Walkthrough**: [Watch on YouTube](https://youtu.be/S3wIm8jJelo)
+- 🎬 **Video Walkthrough**: [Watch on YouTube](https://youtu.be/S3wIm8jJelo) • [MP4 Recording (60.9 MB)](demo/Devops_Project_Demo.mp4)
 - 📊 **Executive Presentation**: [Savoria Presentation (PDF)](demo/Savoria_Presentation.pdf) • [Savoria Presentation (PPTX)](demo/Savoria_Presentation.pptx)
 - 📝 **Details File**: [`evidence/19-demo-video-link.txt`](evidence/19-demo-video-link.txt)
 

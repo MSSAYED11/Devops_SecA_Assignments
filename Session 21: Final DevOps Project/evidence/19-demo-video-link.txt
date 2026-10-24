@@ -6,6 +6,7 @@ Repository: https://github.com/MSSAYED11/Devops_SecA_Assignments/tree/main/Sessi
 
 Project Demonstration & Walkthrough:
 - YouTube Demo Video: https://youtu.be/S3wIm8jJelo
+- Repository Video Recording: demo/Devops_Project_Demo.mp4
 
 Executive Presentation:
 - PDF Slide Deck: demo/Savoria_Presentation.pdf

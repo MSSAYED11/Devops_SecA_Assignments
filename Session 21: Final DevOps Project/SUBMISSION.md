@@ -5,7 +5,7 @@
 **GitHub Username**: [@MSSAYED11](https://github.com/MSSAYED11)  
 **Email**: sayed.24bcs10396@sst.scaler.com  
 **Repository**: [https://github.com/MSSAYED11/Devops_SecA_Assignments/tree/main/Session%2021%3A%20Final%20DevOps%20Project](https://github.com/MSSAYED11/Devops_SecA_Assignments/tree/main/Session%2021%3A%20Final%20DevOps%20Project)  
-**Walkthrough Video / Live Demo**: [Watch Walkthrough on YouTube](https://youtu.be/S3wIm8jJelo)  
+**Walkthrough Video / Live Demo**: [Watch on YouTube](https://youtu.be/S3wIm8jJelo) • [MP4 Recording (60.9 MB)](demo/Devops_Project_Demo.mp4)  
 **Executive Presentation Slide Deck**: [Savoria Presentation (PDF)](demo/Savoria_Presentation.pdf) • [Savoria Presentation (PPTX)](demo/Savoria_Presentation.pptx)  
 
 ---
@@ -75,6 +75,6 @@
 ### M10 — Final Presentation & Documentation (5/5 pts)
 - [x] Comprehensive root [`README.md`](README.md) with architecture diagram, local quickstart, API documentation, and embedded run evidence.
 - [x] Troubleshooting runbook in [`troubleshooting/README.md`](troubleshooting/README.md).
-- [x] Recorded walkthrough video / live demonstration: [Watch on YouTube](https://youtu.be/S3wIm8jJelo).
+- [x] Recorded walkthrough video / live demonstration: [Watch on YouTube](https://youtu.be/S3wIm8jJelo) • [demo/Devops_Project_Demo.mp4](demo/Devops_Project_Demo.mp4).
 - [x] Executive slide deck presentation: [demo/Savoria_Presentation.pdf](demo/Savoria_Presentation.pdf) • [demo/Savoria_Presentation.pptx](demo/Savoria_Presentation.pptx).
 - **Evidence**: [`evidence/19-demo-video-link.txt`](evidence/19-demo-video-link.txt), [`demo/Savoria_Presentation.pdf`](demo/Savoria_Presentation.pdf).
