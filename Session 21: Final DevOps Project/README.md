@@ -186,7 +186,7 @@ The table below maps all project deliverables and verification runs against cour
 | **06** | `evidence/06-app-menu.png` | Live browser at `http://localhost:3000` (Menu Catalog & Management view) | M1, M4 | **Embedded Below** |
 | **07** | `evidence/07-swagger-docs.png` | Live browser at `http://localhost:8000/docs` (FastAPI Swagger UI endpoints) | M1 | **Embedded Below** |
 | **08** | `evidence/08-git-commit-history.png` | `git log --oneline -n 12` (structured, conventional commit history) | M3 | **Embedded Below** |
-| **09** | `evidence/09-github-actions-pipeline.png` | GitHub Actions green pipeline run (Test, Trivy Scan, Build & Push) | M5 | **Embedded Below** — [Live Run](https://github.com/MSSAYED11/Devops_SecA_Assignments/actions/runs/40064567048) |
+| **09** | `evidence/09-github-actions-pipeline.png` | GitHub Actions green pipeline run (Test, Trivy Scan, Build & Push) | M5 | **Embedded Below** — [Live Run #10](https://github.com/MSSAYED11/Devops_SecA_Assignments/actions/runs/40066232683) |
 | **10** | `evidence/10-ghcr-packages.png` | GitHub Container Registry packages with commit SHA tags | M5 | **Embedded Below** — [Packages](https://github.com/MSSAYED11?tab=packages) |
 | **11** | `evidence/11-trivy-scan-output.png` | Trivy scan output passing with 0 HIGH/CRITICAL CVEs | M6 | **Embedded Below** — (See [trivy-explanation.md](trivy-explanation.md)) |
 | **12** | `evidence/12-terraform-plan.png` | `terraform plan` execution output for AWS VPC & EKS | M7 | **Embedded Below** — [Init/Validate Output](evidence/04-terraform-validate.txt) |
