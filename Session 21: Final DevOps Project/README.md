@@ -9,7 +9,7 @@
 
 ## 🎥 Project Demonstration & Presentation
 
-- 🎬 **Walkthrough Video**: [Watch on YouTube](https://youtu.be/S3wIm8jJelo) • [MP4 Recording (60.9 MB)](demo/Devops_Project_Demo.mp4)
+- 🎬 **Walkthrough Video**:  [MP4 Recording (60.9 MB)](demo/Devops_Project_Demo.mp4) • [Watch on YouTube](https://youtu.be/S3wIm8jJelo)
 - 📊 **Executive Presentation (PPTX / PDF)**: [Savoria Presentation (PDF)](demo/Savoria_Presentation.pdf) • [Savoria Presentation (PPTX)](demo/Savoria_Presentation.pptx)
 
 [![Watch Walkthrough on YouTube](https://img.youtube.com/vi/S3wIm8jJelo/hqdefault.jpg)](https://youtu.be/S3wIm8jJelo)
